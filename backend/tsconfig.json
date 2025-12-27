@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* ---------------------------------------------------------
+       1. OUTPUT & ROOT PATHS (Crucial for Docker later)
+    --------------------------------------------------------- */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* ---------------------------------------------------------
+       2. THE TRANSLATION MAGIC (Modern Syntax -> Old Node)
+    --------------------------------------------------------- */
+    "target": "es2016",         /* Output modern JS features... */
+    "module": "commonjs",       /* ...but use 'require' for imports */
+    "moduleResolution": "node", /* Standard Node looking up strategy */
+    "esModuleInterop": true,    /* Allows 'import express from "express"' */
+
+    /* ---------------------------------------------------------
+       3. STRICTNESS (Keep these true)
+    --------------------------------------------------------- */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,       /* Speeds up compilation */
+    "forceConsistentCasingInFileNames": true,
+
+    /* ---------------------------------------------------------
+       4. THINGS TO REMOVE/CHANGE FROM YOUR PASTE
+    --------------------------------------------------------- */
+    // "verbatimModuleSyntax": true,  <-- DELETE THIS (It breaks CommonJS translation)
+    // "isolatedModules": true,       <-- DELETE THIS (Not needed for standard Node apps)
+    
+    "sourceMap": true           /* Good for debugging */
+  }
+}
